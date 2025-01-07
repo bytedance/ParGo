@@ -1,0 +1,21 @@
+{
+    "input":"<Your Directory>/benchmarks/MMEBenmark_v3",
+    "output":"<Your Directory>/output/internlm2-MME",
+    "vision_model_name":"eva-clip-l-14-336",
+    "vision_model": "<Your Directory>/checkpoints/EVA02_CLIP_L_336_psz14_s6B.pt",
+    "llm_model":"<Your Directory>/checkpoints/internlm2-7b",
+    "ckpt": "<Checkpoint Directory>",
+    "batch_size": 1,
+    "lora_target_modules": ["wqkv"],
+    "lora_r": 256,
+    "lora_alpha": 512,
+    "image_size": 336,
+    "fusion_method": "q-former",
+    "bert_type":"<Your Directory>/checkpoints/bert-small-uncased",
+    "cross_attention_freq": 1,
+    "num_query_token": 304,
+    "num_local_query_token":288,
+    "prompt_template": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <Img><ImageHere></Img> {}\nAnswer the question using a single word(Yes or No)\nASSISTANT: ", 
+    "keep_pad":false,
+    "visual_tokens_adjacent":4
+}
